@@ -1,0 +1,13 @@
+{
+  "git": {
+    "commitMessage": ":bookmark: chore: release v${version}"
+  },
+  "github": {
+    "release": false,
+    "skipChecks": true,
+    "tagName": "v${version}"
+  },
+  "npm": {
+    "publish": false
+  }
+}
