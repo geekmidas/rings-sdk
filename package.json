@@ -1,6 +1,6 @@
 {
   "name": "@geekmidas/rings-sdk",
-  "version": "0.0.2",
+  "version": "0.0.0",
   "main": "dist/index.js",
   "types": "src/index.ts",
   "license": "MIT",
@@ -44,7 +44,6 @@
     "typescript-transform-paths": "~3.3.1"
   },
   "dependencies": {
-    "axios": "~0.27.2",
-    "lodash.omit": "~4.5.0"
+    "axios": "~0.27.2"
   }
 }
