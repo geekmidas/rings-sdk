@@ -7,31 +7,43 @@ I have identified that all the requests that need to be made are essentially jus
 I decided to have the configuration of a function to have the structure shown below.
 
 ```ts
-export const configuration: Configuration<Methods, MovieEndpoints, Movie> = {
+enum QuoteEndpoints {
+  Quotes = "/quote",
+  Quote = "/quote/:id",
+}
+
+export const configuration: Configuration<Methods, QuoteEndpoints, Quote> = {
   getAll: {
-    route: MovieEndpoints.Movies,
+    route: QuoteEndpoints.Quotes,
     argType: "params",
     response: "multiple",
   },
   getById: {
-    route: MovieEndpoints.Movie,
+    route: QuoteEndpoints.Quote,
     argType: "string",
     argName: "id",
     response: "single",
   },
-  getQuotes: {
-    route: MovieEndpoints.MovieQuote,
-    argType: "params",
-    response: "multiple",
-  },
 };
+
+export const createClient = (authClient: AuthClient) =>
+  new ConfiguredClient(
+    configuration,
+    authClient
+  ).configureClient<QuoteClient>();
+
+const quoteClient = createClient(new AuthClient(API_KEY));
 ```
 
-The configuration above add 3 methods to a client `getAll`, `getById` and `getQuotes`.
+## Client Generation
+
+All folders in `src/resource` share the same structure. I use this structure together with the names of the files to generate the top level API which contains book, chapter, character, movie and quote.
+
+movieClient will have two properties `getAll` and `getById`. To ensure that the configuration matches the `Client` I have added some typescript magic that will complain if ever there is a drift.
 
 ## GetAll Method
 
-Uses the configured route to make a `GET Request` and expects an object input that returns multiple items as shown by `argType` and `response` respectively. Similar ideas can be inferred for `getById` and `getQuotes`.
+Uses the configured route to make a `GET Request` and expects an object input that returns multiple items as shown by `argType` and `response` respectively. Similar ideas can be inferred for `getById`.
 
 ## Pagination
 
