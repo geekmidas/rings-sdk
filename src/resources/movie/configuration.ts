@@ -6,8 +6,7 @@ import {
   ConfiguredClient,
 } from "clients/ConfiguredClient";
 import { RequestParams, IPaginatedResponse } from "interface/types";
-
-interface Quote {}
+import { Quote } from "resources/quote";
 
 export type Methods = "getAll" | "getById" | "getQuotes";
 

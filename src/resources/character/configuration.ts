@@ -6,8 +6,8 @@ import {
   ConfiguredClient,
 } from "clients/ConfiguredClient";
 import { RequestParams, IPaginatedResponse } from "interface/types";
+import { Quote } from "resources/quote";
 
-interface Quote {}
 export type Methods = "getAll" | "getById" | "getQuotes";
 
 enum CharacterEndpoints {
