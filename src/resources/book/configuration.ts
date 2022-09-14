@@ -6,8 +6,7 @@ import {
   ConfiguredClient,
 } from "clients/ConfiguredClient";
 import { RequestParams, IPaginatedResponse } from "interface/types";
-
-interface Chapter {}
+import { Chapter } from "resources/chapter";
 
 export type Methods = "getAll" | "getById" | "getChapters";
 
