@@ -19,8 +19,7 @@
     "url": "git+https://github.com/geekmidas/rings-sdk.git"
   },
   "publishConfig": {
-    "access": "public",
-    "registry": "https://npm.pkg.github.com"
+    "access": "public"
   },
   "author": "Lebogang Mabala",
   "bugs": {

@@ -8,6 +8,6 @@
     "tagName": "v${version}"
   },
   "npm": {
-    "publish": false
+    "publish": true
   }
 }
