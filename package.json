@@ -9,7 +9,7 @@
     "test": "jest --watch --passWithNoTests --verbose",
     "bootstrap": "rm -rf src/index.ts && ts-node -r tsconfig-paths/register ./build.ts",
     "build": "yarn bootstrap && rm -rf dist && ttsc -p tsconfig.build.json",
-    "release": "release-it --ci",
+    "release": "yarn build && release-it --ci",
     "dev": "ts-node -r tsconfig-paths/register -r dotenv/config src/playground.ts",
     "docs": "yarn typedoc src/index.ts"
   },
