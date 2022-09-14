@@ -1,3 +1,5 @@
+liblab-rings-sdk - v0.0.11 / [Exports](modules.md)
+
 # Lord of the Rings SDK
 
 Nodejs API Wrapper for [Lord of Rings API](https://the-one-api.dev/documentation)
@@ -55,37 +57,37 @@ const { nextPage, items } = await client.chapter.getAll();
 const chapter = await client.chapter.getById("chapterId");
 ```
 
-items has type [`Chapter[]` ](./src/resources/chapter/configuration.ts#L44)
+items has type [`Book[]` ](./src/resources/book/configuration.ts#L47)
 
 ### Character
 
 ```ts
 const { nextPage, items } = await client.character.getAll();
 
-const character = await client.character.getById("characterId");
+const chapter = await client.character.getById("characterId");
 ```
 
-items has type [`Character[]` ](./src/resources/character/configuration.ts#L54)
+items has type [`Book[]` ](./src/resources/book/configuration.ts#L47)
 
 ### Movie
 
 ```ts
 const { nextPage, items } = await client.movie.getAll();
 
-const movie = await client.movie.getById("movieId");
+const chapter = await client.movie.getById("movieId");
 ```
 
-items has type [`Movie[]` ](./src/resources/movie/configuration.ts#L50)
+items has type [`Book[]` ](./src/resources/book/configuration.ts#L47)
 
 ### Quote
 
 ```ts
 const { nextPage, items } = await client.quote.getAll();
 
-const quote = await client.quote.getById("quoteId");
+const quote = await client.chapter.getById("quoteId");
 ```
 
-items has type [`Quote[]` ](./src/resources/quote/configuration.ts#L43)
+items has type [`Book[]` ](./src/resources/book/configuration.ts#L47)
 
 ### Tests
 
@@ -94,5 +96,3 @@ yarn test
 ```
 
 ### Documentation
-
-Find more SDK Documentation [here](./docs/modules.md)

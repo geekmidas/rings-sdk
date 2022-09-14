@@ -3,6 +3,6 @@ src/index.ts
 src/playground.ts
 dist
 .env
-docs
+
 
 yarn-error.log
