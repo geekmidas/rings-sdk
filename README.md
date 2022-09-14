@@ -87,7 +87,23 @@ const quote = await client.quote.getById("quoteId");
 
 items has type [`Quote[]` ](./src/resources/quote/configuration.ts#L43)
 
-### Tests
+## Running the project
+
+run
+
+```sh
+yarn
+```
+
+Create a `.env` file with the contents that mirror the contents of [example](./.env.example)
+
+run
+
+```sh
+yarn dev
+```
+
+## Testing the application
 
 ```sh
 yarn test
