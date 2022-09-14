@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "lib": ["es2015"],
+    "allowJs": false,
+    "declaration": true,
+    "sourceMap": true,
+    "outDir": "dist",
+    "removeComments": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "paths": {
+      "*": ["src/*", "node_modules/*"]
+    },
+    "plugins": [
+      { "transform": "typescript-transform-paths" },
+      { "transform": "typescript-transform-paths", "afterDeclarations": true }
+    ],
+    "esModuleInterop": true
+  },
+  "exclude": ["node_modules", "dist"]
+}
