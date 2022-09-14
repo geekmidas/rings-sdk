@@ -103,6 +103,8 @@ run
 yarn dev
 ```
 
+you can change the contents of [playground](./src/playground.ts) to play around with the client
+
 ## Testing the application
 
 ```sh
